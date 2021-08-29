@@ -5,15 +5,23 @@
       <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
     </Console>
 
-    <File name="File" fileName="logs/advent-of-code.log" append="false">
+    <File name="FileD15" fileName="logs/advent-of-code-day15.log" append="false">
+        <PatternLayout pattern="%d{yyyy-mm-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+    <File name="FileD16" fileName="logs/advent-of-code-day16.log" append="false">
         <PatternLayout pattern="%d{yyyy-mm-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
     </File>
   </appenders>
 
   <loggers>
-    <root level="trace">
-      <appender-ref ref="Console" level="warn"/>
-      <appender-ref ref="File" level="debug"/>
+    <Logger name="za.web.skerwe.adventofcode2020.Day15" level="trace" additivity="false">
+      <AppenderRef ref="FileD15"/>
+    </Logger>
+    <Logger name="za.web.skerwe.adventofcode2020.Day16" level="trace" additivity="false">
+      <AppenderRef ref="FileD16"/>
+    </Logger>
+    <root level="warn">
+      <appender-ref ref="Console"/>
     </root>
   </loggers>
 </configuration>

@@ -30,6 +30,6 @@ public class Day15Test {
     // assertEquals(261214, classUnderTest.partOne(new int[] { 1, 2, 3 }));
     // assertEquals(6895259, classUnderTest.partOne(new int[] { 2, 3, 1 }));
     // assertEquals(18, classUnderTest.partOne(new int[] { 3, 2, 1 }));
-    assertEquals(362, classUnderTest.process(new int[] { 3, 1, 2 }));
+    // assertEquals(362, classUnderTest.process(new int[] { 3, 1, 2 }));
   }
 }

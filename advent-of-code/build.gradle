@@ -35,7 +35,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'za.web.skerwe.adventofcode2020.Day15'
+    mainClass = 'za.web.skerwe.adventofcode2020.Day16'
 }
 
 tasks.named('test') {

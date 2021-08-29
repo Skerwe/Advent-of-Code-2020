@@ -31,7 +31,7 @@ Clone the repository:
 1. Compile the tests:  
     `gradle compileTestJava`
 2. Execute the tests:
-    `gradle run`
+    `gradle test`
 
 ## This project was built with
 
