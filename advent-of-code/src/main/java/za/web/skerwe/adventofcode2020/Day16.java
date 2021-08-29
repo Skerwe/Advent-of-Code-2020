@@ -30,10 +30,10 @@ public class Day16 {
 
     File inputFile = new File("src/main/resources/input-day16.txt");
     int ticketScanningErrorRate = day16Part1.partOne(inputFile.getAbsolutePath());
-    logger.warn(String.format("The ticket scanning error rate is '%s'", ticketScanningErrorRate));
+    logger.info(String.format("The ticket scanning error rate is '%s'", ticketScanningErrorRate));
 
     long departureFieldsValue = day16Part1.partTwo(inputFile.getAbsolutePath());
-    logger.warn(String.format("Multiply the six departure field values together is '%s'", departureFieldsValue));
+    logger.info(String.format("Multiply the six departure field values together is '%s'", departureFieldsValue));
   }
 
   public int partOne(String inputFile) {
@@ -64,7 +64,7 @@ public class Day16 {
    * 
    * Part 2: Remove all invalid tickets.
    * 
-   * @return ticketScanningErrorRate
+   * @return ticketScanningErrorRate total
    */
   private int calculateTicketScanningErrorRate() {
     int ticketScanningErrorRate = 0;
@@ -89,12 +89,17 @@ public class Day16 {
       }
 
     }
-    logger.warn("Removing " + errorTicketsToRemove.size());
+
+    logger.info(String.format("Removing %d invalid tickets.", errorTicketsToRemove.size()));
     nearbyTickets.removeAll(errorTicketsToRemove);
-    logger.warn("Valid tickets: " + nearbyTickets.size());
+    logger.info("Valid tickets found = " + nearbyTickets.size());
     return ticketScanningErrorRate;
   }
 
+  /**
+   * Building a map of positions and each ticket field name that may be in that
+   * specific position.
+   */
   private void buildTicketForm() {
     for (String fieldName : ticketData.keySet()) {
       for (int position = 0; position < yourTicket.size(); position++) {
@@ -137,9 +142,8 @@ public class Day16 {
   private void reduceTicketForm() {
     while (checkIfTicketFormStillContainDuplicates()) {
       printTicketForm();
-      String fieldName = findSingleFieldEntry();
-      removeFieldFromOtherPostions(fieldName);
-      logger.warn("");
+      removeFieldFromOtherPostions(findSingleFieldEntry());
+      logger.trace("");
     }
   }
 
@@ -182,7 +186,6 @@ public class Day16 {
         String fieldName = ticketForm.get(position).get(0);
         logger.debug(String.format("%s has position %d", fieldName.toUpperCase(), position + 1));
         if (fieldName.startsWith("departure")) {
-          logger.info(departureFieldsValue + "*" + yourTicket.get(position));
           departureFieldsValue *= yourTicket.get(position);
         }
       }
@@ -222,8 +225,8 @@ public class Day16 {
 
     }
 
-    logger.info("yourTicket=" + yourTicket.size());
-    logger.info("nearbyTickets=" + nearbyTickets.size());
+    logger.info("yourTicket size  " + yourTicket.size());
+    logger.info("nearbyTickets count = " + nearbyTickets.size());
   }
 
   private void addTicketData(String ticketDataEntry) {
