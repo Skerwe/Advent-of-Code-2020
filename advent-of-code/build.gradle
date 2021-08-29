@@ -13,11 +13,11 @@ plugins {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
+        languageVersion = JavaLanguageVersion.of(8)
     }
 }
 
-version = '0.1.0'
+version = '0.2.1'
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -35,7 +35,9 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'za.web.skerwe.adventofcode2020.Day16'
+    // mainClass = 'za.web.skerwe.adventofcode2020.Day15'
+    // mainClass = 'za.web.skerwe.adventofcode2020.Day16'
+    mainClass.set(project.hasProperty("mainClass") ? project.getProperty("mainClass") : "NULL")
 }
 
 tasks.named('test') {
