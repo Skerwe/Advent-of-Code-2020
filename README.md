@@ -21,7 +21,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You will need Java 11 or higher installed and configured on your system PATH.  
+You will need Java 1.8 or higher installed and configured on your system PATH.  
 It's best to use the [OpenJDK][openjdk], Windows users can get binaries from [AdoptOpenJDK][adoptopenjdk].
 
 ### Installing
