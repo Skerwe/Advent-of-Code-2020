@@ -3,12 +3,12 @@
 My attempt at the Advent of Code for 2020 using Java
 
 ```text
-              _                 _            __    _____          _        ___   ___ ___  __
-     /\      | |               | |          / _|  / ____|        | |      |__ \ / _ \__ \/_ |
-    /  \   __| |_   _____ _ __ | |_    ___ | |_  | |     ___   __| | ___     ) | | | | ) || |
-   / /\ \ / _` \ \ / / _ \ '_ \| __|  / _ \|  _| | |    / _ \ / _` |/ _ \   / /| | | |/ / | |
-  / ____ \ (_| |\ V /  __/ | | | |_  | (_) | |   | |___| (_) | (_| |  __/  / /_| |_| / /_ | |
- /_/    \_\__,_| \_/ \___|_| |_|\__|  \___/|_|    \_____\___/ \__,_|\___| |____|\___/____||_|
+              _                 _            __    _____          _        ___   ___ ___   ___
+     /\      | |               | |          / _|  / ____|        | |      |__ \ / _ \__ \ / _ \
+    /  \   __| |_   _____ _ __ | |_    ___ | |_  | |     ___   __| | ___     ) | | | | ) | | | |
+   / /\ \ / _` \ \ / / _ \ '_ \| __|  / _ \|  _| | |    / _ \ / _` |/ _ \   / /| | | |/ /| | | |
+  / ____ \ (_| |\ V /  __/ | | | |_  | (_) | |   | |___| (_) | (_| |  __/  / /_| |_| / /_| |_| |
+ /_/    \_\__,_| \_/ \___|_| |_|\__|  \___/|_|    \_____\___/ \__,_|\___| |____|\___/____|\___/
 
 ```
 
@@ -21,7 +21,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You will need Java 1.8 or higher installed and configured on your system PATH.  
+You will need Java 11 or higher installed and configured on your system PATH.  
 It's best to use the [OpenJDK][openjdk], Windows users can get binaries from [AdoptOpenJDK][adoptopenjdk].
 
 ### Installing
