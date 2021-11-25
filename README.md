@@ -29,7 +29,7 @@ It's best to use the [OpenJDK][openjdk], Windows users can get binaries from [Ad
 Clone the repository:  
 `git clone https://github.com/Skerwe/Advent-of-Code-2020.git`
 
-1. In the command line, cd into the project directory:  
+1. In bash/terminal/command line, cd into the project directory:  
     `cd Advent-of-Code-2020`
 2. Compile the application:  
    `gradlew compileJava`
@@ -37,7 +37,7 @@ Clone the repository:
    1. To run Day 15: `gradlew -PmainClass=za.web.skerwe.adventofcode2020.Day15 run`
    2. To run Day 16: `gradlew -PmainClass=za.web.skerwe.adventofcode2020.Day16 run`
 
-The final output of the challenge can be found in the Console or the log file for the specific day under the *logs* folder.
+The final output of the challenge is printed to the console or the log file for the specific day under the *logs* folder.
 
 ### Running Tests
 
